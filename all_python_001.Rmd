@@ -1,0 +1,98 @@
+---
+title: "Lenguaje de Marcado Ligero - Markdown"
+author: "Renzo Cáceres Rossi"
+date: "2022/02/21"
+subtitle: Markdown - RMarkdown
+output:
+  html_document:
+    code_download: TRUE
+    toc: TRUE
+    toc_float: TRUE
+---
+
+
+```{python,include=FALSE}
+
+import matplotlib.pyplot as plt
+
+import seaborn as sns
+
+import numpy as np
+
+
+```
+
+
+## Matplotllib_001
+
+```{python,fig.align='center',results='hide',collapse=TRUE}
+eje_x = ['Python', 'R', 'Node.js', 'PHP']
+ 
+
+eje_y = [50,20,35,47]
+ 
+
+plt.bar(eje_x, eje_y)
+ 
+
+plt.ylabel('Cantidad de usuarios')
+ 
+
+plt.xlabel('Lenguajes de programación')
+ 
+
+plt.title('Usuarios de lenguajes de programación')
+ 
+
+plt.show()
+
+```
+
+
+## Matplotlib_002
+
+```{python, fig.align='center',results='hide',collapse=TRUE}
+eje_x = ['Prog.', 'Ciencia', 'Mat.', 'Ing.']
+ 
+
+eje_y = [76,31,45,57]
+ 
+## Creamos Gráfica y ponesmos las barras de color verde
+plt.barh(eje_x, eje_y, color="green")
+plt.ylabel('Empleados')
+plt.xlabel('Habilidades')
+plt.title('Habilidades')
+plt.show()
+
+```
+
+
+## Matplotlib_003
+
+```{python,fig.align='center',results='hide',collapse=TRUE}
+serie_1 = [406, 387, 442, 457, 485]
+serie_2 = [421, 453, 435, 478, 512]
+ 
+ 
+numero_de_grupos = len(serie_1)
+indice_barras = np.arange(numero_de_grupos)
+ancho_barras =0.35
+ 
+plt.bar(indice_barras, serie_1, width=ancho_barras, label='Hombres')
+plt.bar(indice_barras + ancho_barras, serie_2, width=ancho_barras, label='Mujeres')
+plt.legend(loc='best')
+## Se colocan los indicadores en el eje x
+plt.xticks(indice_barras + ancho_barras, ('2017', '2018', '2019', '2020','2021'))
+ 
+plt.ylabel('Numero de habitantes')
+plt.xlabel('Año')
+plt.title('Numero de habitantes por genero')
+ 
+plt.show()
+```
+
+
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+
+

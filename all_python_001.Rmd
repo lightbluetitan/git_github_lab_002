@@ -49,22 +49,7 @@ plt.show()
 ```
 
 
-## Matplotlib_002
 
-```{python, fig.align='center',results='hide',collapse=TRUE}
-eje_x = ['Prog.', 'Ciencia', 'Mat.', 'Ing.']
- 
-
-eje_y = [76,31,45,57]
- 
-## Creamos Gráfica y ponesmos las barras de color verde
-plt.barh(eje_x, eje_y, color="green")
-plt.ylabel('Empleados')
-plt.xlabel('Habilidades')
-plt.title('Habilidades')
-plt.show()
-
-```
 
 
 ## Matplotlib_003
